@@ -1,8 +1,7 @@
 import React from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
-
-import {DATA} from '../../utils/data';
+import {View, FlatList, StyleSheet} from 'react-native';
 import Cabecalho from './componentes/Cabecalho';
+import {DATA} from '../../utils/data';
 import {Item} from './componentes/Produto';
 
 const ListaProdutos = () => {
@@ -12,7 +11,7 @@ const ListaProdutos = () => {
         numColumns={2}
         data={DATA}
         renderItem={({item}) => <Item {...item} />}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         ListHeaderComponent={<Cabecalho />}
       />
     </View>

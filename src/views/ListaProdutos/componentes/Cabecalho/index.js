@@ -1,13 +1,7 @@
 import React from 'react';
-import {SafeAreaView, Text, View, StyleSheet} from 'react-native';
-import {Sacola} from '../../../../components/Sacola';
-import {
-  COR_DE_FUNDO,
-  FONT_FAMILY_BOLD,
-  FONT_FAMILY_REGULAR,
-  FONT_SIZE_MEDIUM,
-  FONT_SIZE_XX_LARGE,
-} from '../../../../styles/styles';
+import {View, StyleSheet, Text, Image} from 'react-native';
+import { COR_DE_FUNDO, FONT_FAMILY_REGULAR } from '../../../../styles/styles';
+import { Sacola } from '../../../../componentes/sacola';
 
 const Cabecalho = () => {
   return (
@@ -16,7 +10,7 @@ const Cabecalho = () => {
         <Text style={styles.titulo}>Lighteria</Text>
         <Sacola />
       </View>
-      <View style={styles.containerDescricao}>
+      <View>
         <View style={styles.separador} />
         <View style={styles.containerTexto}>
           <Text style={styles.textoDescricao}>Categorias</Text>
@@ -32,19 +26,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 16,
-    paddingHorizontal: 6,
+    paddingHorizontal: 6
   },
   titulo: {
-    fontFamily: FONT_FAMILY_BOLD,
-    fontSize: FONT_SIZE_XX_LARGE,
+    fontFamily: 'OpenSans-Bold',
+    fontSize: 28,
   },
-
   separador: {
     borderWidth: 0.5,
     borderColor: '#A1A5AA',
     margin: 10,
   },
-
   containerTexto: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -55,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: COR_DE_FUNDO,
     color: '#A1A5AA',
     fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: FONT_SIZE_MEDIUM,
+    fontSize: 16,
   },
 });
 

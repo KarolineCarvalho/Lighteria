@@ -4,32 +4,20 @@ import {
   FONT_FAMILY_SEMI_BOLD,
   FONT_SIZE_SMALL,
 } from '../../../../styles/styles';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
-export const Item = ({
-  imagem,
-  titulo,
-  estudio,
-  itemDesc,
-  itemName,
-  preco,
-  id,
-}) => {
+export const Item = ({imagem, titulo, estudio, itemDesc, itemName, preco, id}) => {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity
-      style={styles.containerItem}
-      onPress={() =>
-        navigation.push('DetalhesProduto', {
-          itemDesc,
-          imagem,
-          estudio,
-          titulo,
-          preco,
-          id,
-          itemName,
-        })
-      }>
+    <TouchableOpacity style={styles.containerItem} onPress={() => navigation.push('DetalhesProduto', {
+      itemDesc,
+      imagem,
+      estudio,
+      titulo,
+      preco,
+      id,
+      itemName,
+    })}>
       <Image source={imagem} style={styles.imagem} resizeMode="contain" />
       <Text style={styles.texto}>{titulo}</Text>
     </TouchableOpacity>
